@@ -25,17 +25,72 @@ root = Tk()
 
 # 3. EXAMPLE
 
-label3 = Label(root, text='First Name ')
-label4 = Label(root, text='Last Name ')
+# label3 = Label(root, text='First Name ',bg="Red",fg="white")
+# label4 = Label(root, text='Last Name ')
 
-entry1 = Entry(root)
-entry2 = Entry(root)
+# entry1 = Entry(root)
+# entry2 = Entry(root)
 
-label3.grid(row=0,column=0)
-label4.grid(row=1,column=0)
+# label3.grid(row=0,column=0)
+# label4.grid(row=1,column=0)
 
-entry1.grid(row=0,column=1)
-entry2.grid(row=1,column=1)
+# entry1.grid(row=0,column=1)
+# entry2.grid(row=1,column=1)
 
+# 4. EXAMPLE
+
+# label5 = Label(root, text='First ', bg="Red", fg="white")
+# label5.pack(fill=X)
+
+# label6 = Label(root, text='Second ', bg="Blue", fg="Green")
+# label6.pack(fill=Y, side=LEFT)
+
+# 5. EXAMPLE
+
+# def dosomething():
+#     print("you clicked the button")
+
+
+# button1 = Button(root, text="click here", command=dosomething)
+# button1.pack()
+
+# 6. EXAMPLE
+
+# class MyButtons:
+#     def __init__(self,rootone):
+#         frame=Frame(rootone)
+#         frame.pack()
+
+#         self.printbutton=Button(frame,text="click here",command=self.printmessage)
+#         self.printbutton.pack()
+
+#         self.quitbutton=Button(frame,text="Exit",command=frame.quit)
+#         self.quitbutton.pack(side=LEFT)
+
+#     def printmessage(self):
+#         print("button clicked")
+
+# b=MyButtons(root)
+
+# 7. EXAMPLE
+
+def function1():
+    print("menu item clicked")
+
+
+mymenu = Menu(root)
+root.config(menu=mymenu)
+
+submenu = Menu(mymenu)
+mymenu.add_cascade(label="File", menu=submenu)
+submenu.add_command(label="project", command=function1)
+submenu.add_command(label="save", command=function1)
+
+submenu.add_separator()
+submenu.add_command(label="Exit", command=function1)
+
+Newmenu = Menu(mymenu)
+mymenu.add_cascade(label="edit", menu=Newmenu)
+Newmenu.add_command(label="undo", command=function1)
 
 root.mainloop()
