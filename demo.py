@@ -93,4 +93,14 @@ Newmenu = Menu(mymenu)
 mymenu.add_cascade(label="edit", menu=Newmenu)
 Newmenu.add_command(label="undo", command=function1)
 
+toolbar = Frame(root, bg="Pink")
+insertbutton = Button(toolbar, text="Insert File", command=function1)
+insertbutton.pack(side=LEFT, padx=2, pady=3)
+
+printbutton = Button(toolbar, text="print", command=function1)
+printbutton.pack(side=LEFT, padx=2, pady=3)
+
+toolbar.pack(side=TOP, fill=X)
+
+
 root.mainloop()
