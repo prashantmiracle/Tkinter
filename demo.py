@@ -101,5 +101,8 @@ printbutton.pack(side=LEFT, padx=2, pady=3)
 
 toolbar.pack(side=TOP, fill=X)
 
+status=Label(root,text="This is the status",bd=1,relief=SUNKEN,anchor=W)
+status.pack(side=BOTTOM,fill=X)
+
 
 root.mainloop()
