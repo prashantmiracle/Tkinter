@@ -74,35 +74,37 @@ root = Tk()
 
 # 7. EXAMPLE
 
-def function1():
-    print("menu item clicked")
+# def function1():
+#     print("menu item clicked")
 
-mymenu = Menu(root)
-root.config(menu=mymenu)
+# mymenu = Menu(root)
+# root.config(menu=mymenu)
 
-submenu = Menu(mymenu)
-mymenu.add_cascade(label="File", menu=submenu)
-submenu.add_command(label="project", command=function1)
-submenu.add_command(label="save", command=function1)
+# submenu = Menu(mymenu)
+# mymenu.add_cascade(label="File", menu=submenu)
+# submenu.add_command(label="project", command=function1)
+# submenu.add_command(label="save", command=function1)
 
-submenu.add_separator()
-submenu.add_command(label="Exit", command=function1)
+# submenu.add_separator()
+# submenu.add_command(label="Exit", command=function1)
 
-Newmenu = Menu(mymenu)
-mymenu.add_cascade(label="edit", menu=Newmenu)
-Newmenu.add_command(label="undo", command=function1)
+# Newmenu = Menu(mymenu)
+# mymenu.add_cascade(label="edit", menu=Newmenu)
+# Newmenu.add_command(label="undo", command=function1)
 
-toolbar = Frame(root, bg="Pink")
-insertbutton = Button(toolbar, text="Insert File", command=function1)
-insertbutton.pack(side=LEFT, padx=2, pady=3)
+# toolbar = Frame(root, bg="Pink")
+# insertbutton = Button(toolbar, text="Insert File", command=function1)
+# insertbutton.pack(side=LEFT, padx=2, pady=3)
 
-printbutton = Button(toolbar, text="print", command=function1)
-printbutton.pack(side=LEFT, padx=2, pady=3)
+# printbutton = Button(toolbar, text="print", command=function1)
+# printbutton.pack(side=LEFT, padx=2, pady=3)
 
-toolbar.pack(side=TOP, fill=X)
+# toolbar.pack(side=TOP, fill=X)
 
-status=Label(root,text="This is the status",bd=1,relief=SUNKEN,anchor=W)
-status.pack(side=BOTTOM,fill=X)
+# status=Label(root,text="This is the status",bd=1,relief=SUNKEN,anchor=W)
+# status.pack(side=BOTTOM,fill=X)
+
+# 8. EXAMPLE
 
 
 root.mainloop()
