@@ -106,5 +106,17 @@ root = Tk()
 
 # 8. EXAMPLE
 
+# import tkinter.messagebox
+# tkinter.messagebox.showinfo("Title","This is Awesome")
+# response=tkinter.messagebox.askquestion("Question1","Do you like coffee")
+# if response=='yes':
+#     print("here is cofee for you ")
+
+# 9. EXAMPLE
+canvas = Canvas(root, width=200, height=100)
+canvas.pack()
+newline = canvas.create_line(0, 0, 50, 100)
+otherline = canvas.create_line(10, 10, 100, 100, fill="green")
+
 
 root.mainloop()
