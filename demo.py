@@ -77,7 +77,6 @@ root = Tk()
 def function1():
     print("menu item clicked")
 
-
 mymenu = Menu(root)
 root.config(menu=mymenu)
 
